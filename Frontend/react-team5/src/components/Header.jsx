@@ -1,9 +1,10 @@
-// 헤더 컴포넌트
 import styled from "styled-components";
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBell } from "@fortawesome/free-regular-svg-icons";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
+import logo from "../assets/Biglogo.png";
+import { Link } from "react-router-dom";
 
 // 헤더 스타일
 const Container = styled.div`
@@ -23,13 +24,15 @@ const Navebar = styled.div`
   color: #677788;
   font-size: 14px;
   justify-content: end;
+  margin-left: 20px;
 `;
 const Searchbar = styled.input`
-  width: 337px;
+  width: 440px;
   height: 40px;
-  padding: 10px 50px;
+  padding: 8px 50px;
   margin-top: 5px;
-  border: none;
+  border-radius: 20px;
+  border: 0.1px solid #eff0eb;
   margin-right: auto;
   &:focus {
     outline: 0.1px solid #eff0eb;
@@ -46,7 +49,7 @@ const Profile = styled.button`
   border: none;
   &:hover {
     background: #fafabe;
-    color: #e7d355;
+    color: #ffd43b;
     /* transition: 0.5s; */
   }
 `;
@@ -67,21 +70,29 @@ const Alarm = styled.button`
   }
 `;
 
-const Logobar = styled.a`
+const Logobar = styled(Link)`
   height: 62px;
   width: 245px;
   font-size: 16px;
   color: #677788;
+  text-decoration: none;
+  display: block;
 `;
+
 const Logo = styled.img`
   //여기에 이미지 URL 넣기
+  width: 153px;
+  height: 40px;
+  padding-top: 20px;
+  &:hover {
+  }
 `;
 
 const Header = () => {
   return (
     <Container>
-      <Logobar>
-        <Logo></Logo>
+      <Logobar to="/workingholiday">
+        <Logo src={logo} alt="Logo" />
       </Logobar>
       <Navebar>
         <Searchbar placeholder="Search in" type="text"></Searchbar>

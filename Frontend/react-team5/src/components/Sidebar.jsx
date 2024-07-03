@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Container = styled.div`
   width: 200px;
-  height: 400px;
+  height: 600px;
   margin-top: 10px;
   margin-left: 5px;
   border-radius: 20px;
@@ -26,18 +26,31 @@ const Category = styled.div`
     cursor: pointer;
   }
 `;
+const TitleName = styled.div`
+  width: 178.6px;
+  height: 37px;
+  color: #ffd43b;
+  margin: 0px 0px 4px;
+  padding: 8px 14px;
+  font-size: 13px;
+  text-align: center;
+  font-weight: 600;
+`;
 
+// text : 해외취업, 어학연수, 워홀 중에 Home 에서 선택하면 받는 props
 const Sidebar = () => {
   return (
     <>
       <Container>
-        <Category>국가 선택</Category>
-        <Category>국가 별 커뮤니티</Category>
-        <Category>국가별 후기</Category>
+        <TitleName>{/*text*/}</TitleName>
+        <Category>{/*text*/} 국가별 정보</Category>
+        <Category>{/*text*/} 커뮤니티</Category>
+        <Category>국가 정보</Category>
+        <Category>{/*text*/} 국가별 후기</Category>
         <Category>출국 전 정보</Category>
-        <Category>해외 생활 정보</Category>
+        <Category>도착 후 해외 생활 정보</Category>
         <Category>귀국 후 정보</Category>
-        <Category>공동구매</Category>
+        <Category>물품 공동구매</Category>
       </Container>
     </>
   );
