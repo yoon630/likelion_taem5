@@ -15,7 +15,15 @@ import Home from "./pages/Home";
 import PostList from "./pages/PostList";
 import PostRead from "./pages/PostRead";
 import WorkingHoliday from "./pages/WorkingHoliday";
+import UserInfo from "./pages/UserInfo";
+import LeavingInfo from "./pages/LeavingInfo";
 import "./App.css"; // CSS 애니메이션을 위한 파일
+import AbroadLife from "./pages/AbroadLife";
+import Intern from "./pages/Intern";
+import Arrive from "./pages/Arrive";
+import Review from "./pages/Review";
+import GroupBuying from "./pages/GroupBuying";
+import CommunityPage from "./pages/CommunityPage";
 
 const Container = styled.div`
   position: relative;
@@ -35,6 +43,17 @@ const App = () => {
             <Route path="/postlist/:country" element={<PostList />} />
             <Route path="/postread" element={<PostRead />} />
             <Route path="/workingholiday" element={<WorkingHoliday />} />
+            <Route path="/intern" element={<Intern />} />
+            <Route path="/userinfo" element={<UserInfo />} />
+            <Route path="/leavinginfo" element={<LeavingInfo />} />
+            <Route path="/abroadlife" element={<AbroadLife />} />
+            <Route path="/arrive" element={<Arrive />} />
+            <Route path="/review" element={<Review />} />
+            <Route path="/groupbuying" element={<GroupBuying />} />
+            <Route
+              path="/communitypage/:category"
+              element={<CommunityPage />}
+            />
           </Routes>
         </CSSTransition>
       </TransitionGroup>

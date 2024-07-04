@@ -32,13 +32,13 @@ const SectionContainer = styled.div`
   display: flex;
   margin-top: 10px;
 `;
-const WorkingHoliday = () => {
+const Study = () => {
   return (
     <>
       <Header />
 
       <BackGround>
-        <Sidebar text="워킹홀리데이"></Sidebar>
+        <Sidebar text="어학연수"></Sidebar>
         <Wrapper>
           <KeyWord />
           <SectionContainer>
@@ -52,4 +52,4 @@ const WorkingHoliday = () => {
   );
 };
 
-export default WorkingHoliday;
+export default Study;

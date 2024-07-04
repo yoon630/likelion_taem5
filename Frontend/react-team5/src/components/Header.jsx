@@ -39,13 +39,17 @@ const Searchbar = styled.input`
     border-radius: 20px;
   }
 `;
-const Profile = styled.button`
+const Profile = styled(Link)`
   width: 42px;
   height: 42px;
   margin: 5px;
   cursor: pointer;
   border-radius: 50%;
   background-color: inherit;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  display: flex;
   border: none;
   &:hover {
     background: #fafabe;
@@ -99,7 +103,7 @@ const Header = () => {
         <Alarm>
           <FontAwesomeIcon icon={faBell} />
         </Alarm>
-        <Profile>
+        <Profile to="/userinfo">
           <FontAwesomeIcon icon={faUser} />
         </Profile>
       </Navebar>

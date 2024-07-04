@@ -8,7 +8,7 @@ const AdvBanner = styled.div`
   height: 120px;
   border: 0.1px solid #eff0eb;
   border-radius: 20px;
-  box-shadow: 0 0.375rem 0.75rem rgba(140, 152, 164, 0.075);
+  box-shadow: 0 0.375rem 0.375rem #fafabe;
   font-size: 20px;
   font-weight: 550;
   color: #0a124d;

@@ -23,14 +23,15 @@ const KeywordBox = styled.div`
   width: 160px;
   height: 50px;
   padding: 10px;
-  box-shadow: 0 0.375rem 0.75rem rgba(140, 152, 164, 0.075);
+  box-shadow: 0 0.375rem 0.375rem #fafabe;
+  border: 0.1px solid #fafabe;
   border-radius: 10px;
   margin: auto;
   margin-bottom: 10px;
-  border: 0.1px solid #eff0eb;
+
   &:hover {
-    box-shadow: 0 0.375rem 0.75rem #fafabe;
-    border: 0.1px solid #fafabe;
+    box-shadow: 0 0.375rem 0.75rem rgba(140, 152, 164, 0.075);
+    border: 0.1px solid #eff0eb;
     cursor: pointer;
   }
 `;
