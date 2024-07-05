@@ -95,7 +95,7 @@ const Logo = styled.img`
 const Header = () => {
   return (
     <Container>
-      <Logobar to="/workingholiday">
+      <Logobar to="/home">
         <Logo src={logo} alt="Logo" />
       </Logobar>
       <Navebar>
