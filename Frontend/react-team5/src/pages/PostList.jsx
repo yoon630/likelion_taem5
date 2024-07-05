@@ -6,6 +6,7 @@ import Sidebar from "../components/Sidebar";
 import PostCard from "../components/PostCard";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const PageLayout = styled.div`
   display: flex;
