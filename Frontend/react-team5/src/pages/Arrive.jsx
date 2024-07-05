@@ -3,6 +3,7 @@ import styled from "styled-components";
 import React from "react";
 import Sidebar from "../components/Sidebar";
 import Header from "../components/Header";
+// import { useParams } from "react-router-dom";
 
 const CardContainer = styled.div`
   width: 300px;
@@ -89,6 +90,9 @@ const FilterButton = styled.button`
 `;
 
 const Arrive = () => {
+  // const { category } = useParams();
+  // const text = category || "";
+
   return (
     <>
       <Header />

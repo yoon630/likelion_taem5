@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import PostCard from "../components/PostCard";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const PageLayout = styled.div`
   display: flex;
@@ -21,6 +22,11 @@ const PostGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
+`;
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  /* 원하는 다른 스타일도 추가할 수 있습니다 */
+  color: inherit; /* 링크 색상을 부모 요소의 색상으로 상속 */
 `;
 
 const Country = styled.div`
@@ -83,7 +89,37 @@ const PostList = () => {
         date: "2023-07-20",
         preview: "프랑스의 역사가 살아숨쉬는 베르사유 궁전을 탐방했습니다.",
         continent: "유럽",
+        country: "france",
+      },
+      {
+        id: 3,
+        title: "나이아가라 폭포 투어",
+        likes: 45,
+        author: "명예캐나다인",
+        date: "2023-06-30",
+        preview: "나이아가라 폭포에서 무지개를 보다!",
+        continent: "북미",
+        country: "canada",
+      },
+      {
+        id: 4,
+        title: "12사도 투어 후기",
+        likes: 65,
+        author: "대한호주인",
+        date: "2022-12-23",
+        preview: "12사도와 그레이트 오션로드를 갔습니다.",
+        continent: "오세아니아",
         country: "australia",
+      },
+      {
+        id: 5,
+        title: "뉴질랜드 남섬 여행",
+        likes: 33,
+        author: "키위새는 짹짹",
+        date: "2023-11-30",
+        preview: "친구랑 같이 남섬투어를 신청했어요.",
+        continent: "오세아니아",
+        country: "newzealand",
       },
       // … 더 많은 포스트 데이터
     ];
@@ -151,16 +187,18 @@ const PostList = () => {
           </FilterButtons>
           <PostGrid>
             {posts.map((post) => (
-              <PostCard
-                key={post.id}
-                title={post.title}
-                likes={post.likes}
-                author={post.author}
-                date={post.date}
-                preview={post.preview}
-                continent={post.continent}
-                country={post.country}
-              />
+              <StyledLink key={post.id} to={`/postread/${post.id}`}>
+                <PostCard
+                  key={post.id}
+                  title={post.title}
+                  likes={post.likes}
+                  author={post.author}
+                  date={post.date}
+                  preview={post.preview}
+                  continent={post.continent}
+                  country={post.country}
+                />
+              </StyledLink>
             ))}
           </PostGrid>
         </MainContent>

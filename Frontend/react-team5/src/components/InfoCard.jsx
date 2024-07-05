@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useLocation } from "react-router-dom";
 
 const ContentBox = styled.div`
   width: 520px;
@@ -68,12 +69,25 @@ const SiteButton = styled.button`
 `;
 
 const InfoCard = () => {
+  const location = useLocation();
+
+  // 현재 경로에 따라 Title을 설정합니다
+  let titleText = " ";
+  if (
+    location.pathname === "/workingholiday" ||
+    location.pathname === "/WorkingHoliday"
+  ) {
+    titleText = "Working Holiday";
+  } else if (location.pathname === "/intern") {
+    titleText = "Intern";
+  } else if (location.pathname === "/study") {
+    titleText = "Study Abroad";
+  }
+
   return (
     <>
       <ContentBox>
-        <Title>
-          Working Holiday{/*여기를 워홀인지 해외취업인지*/} Information
-        </Title>
+        <Title> {titleText} Information </Title>
         <CountryBox>
           북아메리카
           <CountryTag>

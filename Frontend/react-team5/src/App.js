@@ -24,6 +24,7 @@ import Arrive from "./pages/Arrive";
 import Review from "./pages/Review";
 import GroupBuying from "./pages/GroupBuying";
 import CommunityPage from "./pages/CommunityPage";
+import Study from "./pages/Study";
 
 const Container = styled.div`
   position: relative;
@@ -41,14 +42,15 @@ const App = () => {
             <Route path="/writing" element={<Writing />} />
             <Route path="/home" element={<Home />} />
             <Route path="/postlist/:country" element={<PostList />} />
-            <Route path="/postread" element={<PostRead />} />
+            <Route path="/postread/:postId" element={<PostRead />} />
             <Route path="/workingholiday" element={<WorkingHoliday />} />
             <Route path="/intern" element={<Intern />} />
+            <Route path="/study" element={<Study />} />
             <Route path="/userinfo" element={<UserInfo />} />
             <Route path="/leavinginfo" element={<LeavingInfo />} />
             <Route path="/abroadlife" element={<AbroadLife />} />
             <Route path="/arrive" element={<Arrive />} />
-            <Route path="/review" element={<Review />} />
+            <Route path="/review/:category" element={<Review />} />
             <Route path="/groupbuying" element={<GroupBuying />} />
             <Route
               path="/communitypage/:category"

@@ -50,7 +50,7 @@ const FilterButton = styled.button`
 
 const CommunityPage = () => {
   const { category } = useParams();
-  const text = category || "";
+  const text = category || "  ";
   const [posts, setPosts] = useState([]);
   const [sortBy, setSortBy] = useState("likes");
   const [selectedCountry, setSelectedCountry] = useState(null);

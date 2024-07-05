@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import PostCard from "../components/PostCard";
+// import { useParams } from "react-router-dom";
 
 const PageLayout = styled.div`
   display: flex;
@@ -48,6 +49,8 @@ const FilterButton = styled.button`
 `;
 
 const GroupBuying = () => {
+  // const { category } = useParams();
+  // const text = category || "";
   const [posts, setPosts] = useState([]);
   const [sortBy, setSortBy] = useState("likes");
 

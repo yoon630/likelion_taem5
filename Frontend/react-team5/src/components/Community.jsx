@@ -1,4 +1,3 @@
-//Community
 import React from "react";
 import styled from "styled-components";
 import canada from "../assets/canada.png";
@@ -65,7 +64,7 @@ const SiteButton = styled.button`
   padding: 8px 16px;
   border-radius: 10px;
   border: none;
-  color: white;
+  color: #0a124d;
   background-color: #ffd43b;
   text-align: center;
 

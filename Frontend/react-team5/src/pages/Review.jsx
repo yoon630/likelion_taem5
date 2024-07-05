@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
+import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
@@ -47,6 +48,8 @@ const FilterButton = styled.button`
 `;
 
 const Review = () => {
+  const { category } = useParams();
+  const text = category || "  ";
   const [posts, setPosts] = useState([]);
   const [sortBy, setSortBy] = useState("likes");
   const [selectedCountry, setSelectedCountry] = useState(null);
@@ -150,7 +153,7 @@ const Review = () => {
     <>
       <Header />
       <PageLayout>
-        <Sidebar />
+        <Sidebar text={text} />
         <MainContent>
           <Country>국가별 후기</Country>
           <FilterButtons>
